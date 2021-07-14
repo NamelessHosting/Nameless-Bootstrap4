@@ -64,10 +64,10 @@
                         <input type="hidden" name="token" value="{$FORM_TOKEN}">
 
                         <hr class="colorgraph">
-                        {if isset($RECAPTCHA)}
+                        {if $CAPTCHA}
                             <div class="form-group">
                                 <center>
-                                    <div class="{$CAPTCHA_CLASS}" data-sitekey="{$RECAPTCHA}"></div>
+                                    {$CAPTCHA}
                                 </center>
                             </div>
                         {/if}

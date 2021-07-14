@@ -10,32 +10,36 @@
                     {$SUCCESS}
                 </div>
             {/if}
-            <form action="" method="post">
-                {if isset($ERROR)}
-                    <div class="alert alert-danger">
-                        {$ERROR}
-                    </div>
-                {/if}
-                {if isset($ERROR_EMAIL)}
-                    <div class="alert alert-danger">
-                        {$ERROR_EMAIL}
-                    </div>
-                {/if}			
+
+            {if isset($ERRORS)}
+                <div class="alert alert-danger">
+                    {$ERRORS}
+                </div>
+            {/if}
+
+            {if isset($ERROR_EMAIL)}
+                <div class="alert alert-danger">
+                    {$ERROR_EMAIL}
+                </div>
+            {/if}
+
+            {if isset($ERROR_CONTENT)}
+                <div class="alert alert-danger">
+                    {$ERROR_CONTENT}
+                </div>
+            {/if}
+
+            <form action="" method="post" id="contact">     
                 <div class="form-group">
                     <input type="email" name="email" id="email" class="form-control form-control-lg" placeholder="{$EMAIL}" tabindex="3">
                 </div>
-                {if isset($ERROR_CONTENT)}
-                    <div class="alert alert-danger">
-                        {$ERROR_CONTENT}
-                    </div>
-                {/if}
                 <div class="form-group">
                     <label for="inputMessage">{$MESSAGE}</label>
                     <textarea id="inputMessage" name="content" class="form-control" rows="5"></textarea>
                 </div>
-                {if isset($RECAPTCHA)}
+                {if $CAPTCHA}
                     <div class="form-group">
-                        <div class="g-recaptcha" data-sitekey="{$RECAPTCHA}"></div>
+                        {$CAPTCHA}
                     </div>
                 {/if}
                 <div class="form-group">

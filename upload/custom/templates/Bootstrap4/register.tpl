@@ -8,6 +8,7 @@
 		<div class="card-body">
 		  <form action="" method="post">
 			<h2>{$CREATE_AN_ACCOUNT}</h2>
+
 			{if isset($REGISTRATION_ERROR)}
 			  <div class="alert alert-danger">
 			  {foreach from=$REGISTRATION_ERROR item=error}
@@ -59,6 +60,7 @@
 				</div>
 			  </div>
 			</div>
+
 			{if count($CUSTOM_FIELDS)}
 				<h2>{$CUSTOM_FIELDS_TEXT}</h2>
 				<hr class="colorgraph" />
@@ -75,14 +77,15 @@
 					</div>
 				{/foreach}
 			{/if}
-			{if isset($RECAPTCHA)}
+
+			{if $CAPTCHA}
 			<div class="form-group">
 			  <center>
-				<div class="{$CAPTCHA_CLASS}" data-sitekey="{$RECAPTCHA}"></div>
+				{$CAPTCHA}
 			  </center>
 			</div>
 			{/if}
-			
+
 			<div class="row">
 			  <div class="col-xs-4 col-sm-3 col-md-3">
 				<span class="button-checkbox">
