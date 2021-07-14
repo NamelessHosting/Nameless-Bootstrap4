@@ -5,6 +5,8 @@
     <div class="card">
         <div class="card-body">
             <h2>{$CONTACT}</h2>
+            <hr>
+            
             {if isset($SUCCESS)}
                 <div class="alert alert-success">
                     {$SUCCESS}

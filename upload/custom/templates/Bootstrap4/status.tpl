@@ -5,7 +5,8 @@
     <div class="card">
         <div class="card-body">
             <h2>{$STATUS}</h2>
-
+            <hr>
+            
             {if isset($CLICK_TO_COPY_TOOLTIP)}
             <div class="alert alert-info" style="text-align:center">
                 <span onclick="copyToClipboard('#ip')" data-toggle="tooltip" title="{$CLICK_TO_COPY_TOOLTIP}">{$CONNECT_WITH}</span>
