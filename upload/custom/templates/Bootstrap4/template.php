@@ -2,7 +2,7 @@
 /*
  *	Made by Samerton
  *  https://github.com/NamelessMC/Nameless/
- *  NamelessMC version 2.0.0-pr8
+ *  NamelessMC version 2.0.0-pr10
  *
  *  License: MIT
  *
@@ -20,7 +20,7 @@ class Bootstrap4_Template extends TemplateBase {
 		parent::__construct(
 			'Bootstrap4',
 			'1.0.0',
-			'2.0.0-pr8',
+			'2.0.0-pr10',
 			'<a href="https://samerton.me/" target="_blank">Samerton</a>'
 		);
 
@@ -46,6 +46,13 @@ class Bootstrap4_Template extends TemplateBase {
 		} else {
 			$nav_bg = 'light';
 			$cache->store('nav_bg', 'light');
+		}
+        
+		if($cache->isCached('header_text')){
+			$header_text = $cache->retrieve('header_text');
+		} else {
+			$header_text = false;
+			$cache->store('header_text', false);
 		}
 
 		// Add any CSS files here
@@ -397,6 +404,7 @@ class Bootstrap4_Template extends TemplateBase {
 		// Assign any Smarty variables
 		$smarty->assign('NAV_STYLE', Output::getClean($nav_style));
 		$smarty->assign('NAV_BG', Output::getClean($nav_bg));
+        $smarty->assign('HEADER_TEXT', Output::getClean($header_text));
 	}
 
 	// Add any CSS/JS as the page is about to be loaded - here we can get the page name that we are on

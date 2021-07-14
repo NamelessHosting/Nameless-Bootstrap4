@@ -2,7 +2,7 @@
 /*
  *	Made by Samerton
  *  https://github.com/samerton
- *  NamelessMC version 2.0.0-pr8
+ *  NamelessMC version 2.0.0-pr10
  *
  *  License: MIT
  *
@@ -10,7 +10,7 @@
  */
 
 // Which version of NamelessMC is this language file updated to?
-$language_version = '2.0.0-pr8';
+$language_version = '2.0.0-pr10';
  
 $language = array(
 	/*
@@ -19,5 +19,6 @@ $language = array(
 	'default_theme_title' => 'Default Theme',
 	'theme' => 'Theme',
 	'navbar_style' => 'Navbar Style',
-	'navbar_colour' => 'Navbar Colour'
+	'navbar_colour' => 'Navbar Colour',
+    'header_text' => 'Hide Header Text (The text on homepage header)'
 );

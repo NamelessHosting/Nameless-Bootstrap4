@@ -23,6 +23,13 @@
         </select>
     </div>
     <div class="form-group">
+        <label for="inputHeaderText">{$HEADER_TEXT}</label>
+        <select name="headerText" class="form-control" id="inputHeaderText">
+            <option value="1"{if $HEADER_TEXT_VALUE eq true} selected{/if}>Enabled</option>
+			<option value="0"{if $HEADER_TEXT_VALUE eq false} selected{/if}>Disabled</option>
+        </select>
+    </div>
+    <div class="form-group">
         <input type="hidden" name="token" value="{$TOKEN}">
         <input type="submit" class="btn btn-primary" value="{$SUBMIT}">
     </div>

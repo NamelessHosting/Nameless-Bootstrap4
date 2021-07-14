@@ -2,7 +2,7 @@
 /*
  *	Made by Samerton
  *  https://github.com/NamelessMC/Nameless/
- *  NamelessMC version 2.0.0-pr8
+ *  NamelessMC version 2.0.0-pr10
  *
  *  License: MIT
  *
@@ -26,6 +26,10 @@ if(Input::exists()){
 
 		if(isset($_POST['navbarColour'])){
 			$cache->store('nav_bg', $_POST['navbarColour']);
+		}
+        
+		if(isset($_POST['headerText'])){
+			$cache->store('header_text', $_POST['headerText']);
 		}
 
 		Session::flash('admin_templates', $language->get('admin', 'successfully_updated'));
@@ -55,6 +59,13 @@ if($cache->isCached('nav_bg')){
 } else {
 	$nav_bg = 'light';
 	$cache->store('nav_bg', 'light');
+}
+
+if($cache->isCached('header_text')){
+	$header_text = $cache->retrieve('header_text');
+} else {
+	$header_text = false;
+	$cache->store('header_text', false);
 }
 
 $themes = array(
@@ -222,5 +233,7 @@ $smarty->assign(array(
 	'NAVBAR_STYLE_VALUE' => $nav_style,
 	'NAVBAR_COLOUR' => $default_theme_language->get('language', 'navbar_colour'),
 	'NAVBAR_COLOURS' => $nav_colours,
+    'HEADER_TEXT' => $default_theme_language->get('language', 'header_text'),
+    'HEADER_TEXT_VALUE' => $header_text,
 	'SETTINGS_TEMPLATE' => ROOT_PATH . '/custom/templates/Bootstrap4/template_settings/settings.tpl'
 ));

@@ -3,6 +3,7 @@
 <div class="jumbotron home-header"{if isset($BANNER_IMAGE)} style="background-image:url('{$BANNER_IMAGE}')"{/if}>
   <div class="container">
 	{include file='navbar.tpl'}
+    {if !$HEADER_TEXT}
 	<center>
 	  <br /><br /><br />
 	  <h1>{$SITE_NAME}</h1>
@@ -25,7 +26,7 @@
 		{/if}
 	  {/if}
 	</center>
-
+    {/if}
   </div>
 </div>
 

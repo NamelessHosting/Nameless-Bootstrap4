@@ -2,7 +2,7 @@
 /*
  *	Made by Samerton
  *  https://github.com/samerton
- *  NamelessMC version 2.0.0-pr8
+ *  NamelessMC version 2.0.0-pr10
  *
  *  Translation by Mari0914( @Mari0914_Main, https://mari0914.japanminigame.net )
  *
@@ -12,7 +12,7 @@
  */
 
 // Which version of NamelessMC is this language file updated to?
-$language_version = '2.0.0-pr8';
+$language_version = '2.0.0-pr10';
  
 $language = array(
 	/*
@@ -21,5 +21,6 @@ $language = array(
 	'default_theme_title' => 'デフォルトテーマ',
 	'theme' => 'テーマ',
 	'navbar_style' => 'ナビゲーションバースタイル',
-	'navbar_colour' => 'ナビゲーションバーカラー'
+	'navbar_colour' => 'ナビゲーションバーカラー',
+    'header_text' => 'Hide Header Text (The text on homepage header)'
 );
